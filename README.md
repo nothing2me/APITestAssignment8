@@ -1,29 +1,5 @@
-REST API Testing
-Overview: This documents testing for REST API resource endpoints using curl commands in PowerShell.
+Assignment 9 PostgreSQL Integration
 
-RESOURCE TESTING STEPS
-GET - Getting all resources
-PS D:\IntProgAssignment> curl.exe http://localhost:3000/api/resources  
-[{"id":1,"name":"Have chatgpt do my homework","completed":false},
-{"id":2,"name":"Cram for midterm","completed":false}]
+https://github.com/nothing2me/APITestAssignment8
 
-GET- A single resource by ID
-PS D:\IntProgAssignment> curl.exe http://localhost:3000/api/resources/1
-{"id":1,"name":"Have chatgpt do my homework","completed":false}
-
-GET- A resource that DNE
-PS D:\IntProgAssignment> curl.exe -i http://localhost:3000/api/resources/999
-{"error":"Resource not found"}
-
-POST- Add a new resource
-PS D:\IntProgAssignment> curl.exe --% -i -X POST http://localhost:3000/api/resources
-{"id":3,"name":"Complete API assignment","completed":false}
-
-PUT- Update a resource
-PS D:\IntProgAssignment> curl.exe --% -i -X PUT http://localhost:3000/api/resources/3 
-{"id":3,"name":"API assignment finished","completed":true}
-
-DELETE- Delete a resource and verify  it
-PS D:\IntProgAssignment> curl.exe -X DELETE http://localhost:3000/api/resources/3
-PS D:\IntProgAssignment> curl.exe http://localhost:3000/api/resources/3
-{"error":"Resource not found"}
+I chose PostgreSQL because of my previous experience with building an SQL database, so its usage is a tad familiar. But also because of its compatibility with my relational design: just simple IDs, names, and status fields. AI tools such as CoPilot helped me understand the task at hand and what I needed to do in order to transform the last assignment into a database-ready solution. Saving me a headache, ChatGPT also helped with troubleshooting package and dependency setup, which was caused by some previous installation issues.
